@@ -1,0 +1,754 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+
+/* header section---------------------------------------------- */
+.site-header {
+    background-color: #004d99; /* A professional deep blue, common in government sites */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px 160px 20px 160px; /* Internal spacing */
+    text-align: center; /* Center the text content */
+   
+}
+
+@media (max-width: 1180px) {
+    .site-header {
+        padding: 20px 20px 20px 20px;
+    }}
+
+.header-content h1 {
+    font-size: 2.2em; /* Large size for the main department name */
+    margin: 0 0 5px 0; /* Adjust spacing */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+}
+
+.header-content h2 {
+    font-size: 1.5em; /* Slightly smaller for the application name */
+    font-weight: normal; /* Less bold than the main heading */
+    margin: 0 0 10px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+}
+
+.header-content p {
+    font-size: 1.1em;
+    font-weight: normal; /* Lighter weight for authority line */
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Optional: To make the acronym 'OSCAR' stand out more */
+.header-content h2 span {
+    font-weight: bold;
+    color: #ffcc00; /* A gold/yellow highlight color */
+}
+
+/* headr Logos Adgestment */
+#cc {
+    width: 80px;
+    float: left;
+}
+
+#ind {
+    width: 60px;
+    float: right;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    #cc {
+        /* visibility: hidden; */
+        visibility: collapse;
+    }}
+
+@media (max-width: 800px) {
+    #ind {
+        /* visibility: hidden; */
+        visibility: collapse;
+    }}
+
+   
+
+
+
+
+/* Nave Section CSS ------------------------------------------------------*/
+/* --- 1. Base Styles for Navigation --- */
+.main-nav {
+    background-color: #f0f0f0; /* Light background for contrast against the header */
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Enable Flexbox for layout */
+    justify-content: center; /* Center the navigation items */
+    flex-wrap: wrap; /* Allow items to wrap if screen is too narrow (desktop) */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    background-color: #333;
+    font-size: 14px;
+}
+
+.nav-list li a {
+    display: block; /* Make the link fill the list item */
+    padding: 15px 20px;
+    text-decoration: none; /* Remove underline */
+    color: #b4b2b2;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-list li a:hover {
+    background-color: #000; /* Match department blue on hover */
+    color: #ffffff;
+}
+
+/* Makes the Home link stand out more */
+.home-btn {
+        background-color: #000;
+        color: #ffffff;}
+
+@media (max-width: 768px) {
+    .home-btn {
+        /* visibility: hidden; */
+        visibility: collapse;
+    }}
+        
+/* --- 2. Styling for Admin Login (Optional) --- */
+
+/* Makes the Admin Login link stand out more */
+.admin-link a {
+    background-color:  /* Red or strong color for restricted access */
+    color: #ffffff;
+}
+
+
+/* --- 3. Responsive Breakpoint --- */
+
+/* For screens smaller than 768px (Mobile/Tablet Portrait) */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Make them fill the full width */
+        text-align: center;
+    }
+
+    .nav-list li {
+        border-bottom: 1px solid #ddd; /* Separator lines for vertical links */
+    }
+
+    .nav-list li:last-child {
+        border-bottom: none; /* Remove separator on the last item */
+    }
+}
+
+/* ------------------------------------------New Navbar  --------------------------------------*/
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* --- Navigation Bar Layout --- */
+
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: space-between; /* Space between brand and links */
+    align-items: center;
+    padding: 0px 160px 0px 160px;
+    height: 45px;
+    position: relative; /* Essential for absolute positioning of mobile menu */
+}
+
+@media (max-width: 900px) {
+    
+    /* Show the hamburger icon */
+    .navbar {
+        padding: 0px 20px 0px 20px;
+        }}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* --- Navigation Links Styling --- */
+
+.home-btn {
+    background-color: #575757;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    font-weight: 0;
+    color: white;
+    box-shadow: none;
+    border-style: none;
+    
+
+}
+
+/* .home-btn:hover {
+    background-color: #626262;
+    color:#575757;
+} */
+
+.nav-links ul {
+    list-style: none;
+    display: flex; /* Links side-by-side on desktop */
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #575757;
+}
+
+/* --- Hamburger Menu Icon (Hidden on Desktop) --- */
+
+.hamburger-menu {
+    display: none; /* Hide by default for desktop view */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    z-index: 10; /* Keep it above the expanding menu */
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Mobile View: Hide Menu and Show Hamburger Icon --- */
+
+@media (max-width: 768px) {
+    
+    /* Show the hamburger icon */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Configure the navigation links for mobile (vertical and hidden) */
+    .nav-links {
+        /* Position it to cover the rest of the screen */
+        position: absolute;
+        top: 45px; /* Below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        /* Start hidden (off-screen or height 0) */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        z-index: 5;
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Stack links vertically */
+        padding: 10px 0;
+    }
+    
+    .nav-links li a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #444; /* Separator for links */
+    }
+    
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    /* Class added by JS when menu is open */
+    .nav-links.active {
+        max-height: 300px; /* Enough height to show all links */
+    }
+
+    /* Hamburger Animation (Optional but recommended) */
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0; /* Hide middle bar */
+    }
+
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg); /* Top bar to top-right */
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); /* Bottom bar to bottom-right */
+    }
+}
+
+/* Latest News Scetion -------------------------------------------------- */
+
+.news-ticker-section {
+    display: flex; /* Use flexbox to align label and scroller */
+    align-items: center;
+    background-color: #ffffff; /* Light yellow/cream background (subtle warning color) */
+    border: 1px solid #faebcc;
+    margin: 0px 0;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    overflow: hidden; /* Crucial: hides the text outside the scroll area */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: red;
+}
+
+.preText{
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    color: red;
+}
+
+/* --- Label (LATEST NEWS) Styles and Pulse Animation --- */
+.news-label-container {
+    background-color: red; /* Alert Red */
+    color: #ffffff;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 0.9em;
+    flex-shrink: 0; /* Prevents the label from shrinking */
+    text-transform: uppercase;
+}
+
+@media (max-width: 799px) {
+            .news-label-container {
+                visibility: hidden;
+            }
+        }
+
+.news-label {
+    /* Apply the flashing/pulsing effect to the label */
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+/* --- Ticker (Scrolling Text) Styles and Animation --- */
+.ticker-wrap {
+    flex-grow: 1; /* Allows the scroll area to take up the remaining space */
+    height: 100%;
+    padding-left: 15px; /* Spacing between label and text */
+    overflow: hidden; /* Hides content outside this wrapper */
+    white-space: nowrap; /* Forces text to stay on a single line */
+}
+
+@media (max-width: 799px) {
+            .ticker-wrap {
+                overflow: visible;
+            }
+        }
+
+.ticker-text-content {
+    display: inline-block; /* Essential for the animation */
+    padding-right: 100%; /* Creates a gap before the content loops */
+    color: #333;
+    font-size: 0.9em;
+    
+    /* Apply the scrolling animation */
+    animation: ticker-scroll 60s linear infinite; /* Adjust time for speed */
+}
+
+/* Define the scrolling animation */
+@keyframes ticker-scroll {
+    0% {
+        transform: translate3d(0, 0, 0); /* Start position: no translation */
+        loop="infinite"
+    }
+    100% {
+        /* End position: moves the text 100% of its own width to the left */
+        transform: translate3d(-100%, 0, 0); 
+    }
+}
+
+/* Optional: Pause animation on hover */
+.ticker-text-content:hover {
+    animation-play-state: paused;
+}
+
+
+
+/* Button Section CSS------------------------------------------------- */
+:root {
+            /* Define colors for easy adjustments */
+            --header-bg: #004d99; /* Light Blue */
+            --column-bg: #cccccc; /* Gray */
+            --button-bg: #ffee66; /* Yellow */
+            --button-hover: #ffdd44;
+            --text-color: #000;
+        }
+
+        .box1 {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 5px 20px 20px 20px;
+            background-color: #d2e7fb;
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px; /* Max width for the whole content */
+        }
+
+        .menu-grid {
+            display: grid;
+            /* Default: Single column layout for mobile */
+            grid-template-columns: 1fr;
+            gap: 15px; /* Spacing between columns/rows */
+        }
+
+        /* --- Media Query for PC/Larger Screens --- */
+        @media (min-width: 768px) {
+            .menu-grid {
+                /* Four equal columns for desktop */
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* --- Column Styles --- */
+
+        .column {
+            background-color: var(--column-bg);
+            border: 1px solid #999;
+            border-radius: 4px;
+            overflow: hidden; /* Ensures header background is contained */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            min-height: 400px; /* Ensure columns have similar height visually */
+        }
+
+        .column-header {
+            background-color: var(--header-bg);
+            color: var(--text-color);
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .button-group {
+            padding: 5px 15px 5px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px; /* Spacing between buttons */
+            flex-grow: 1; /* Allows button group to fill remaining space */
+        }
+
+
+
+        /* --- Button and Text Styles --- */
+
+        .action-button {
+            background-color: var(--button-bg);
+            color: var(--text-color);
+            border: none;
+            border-radius: 5px;
+            padding: 12px 10px;
+            font-size: 0.95em;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.2s, transform 0.1s;
+            width: 100%; /* Full width within the button group */
+            text-decoration: none; /* In case you use <a> tags */
+            display: block;
+        }
+
+        .action-button:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-1px);
+        }
+
+        .action-button-guide {
+            background-color: lightgreen;
+            color: var(--text-color);
+            border: none;
+            border-radius: 5px;
+            padding: 12px 10px;
+            font-size: 0.95em;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.2s, transform 0.1s;
+            width: 100%; /* Full width within the button group */
+            text-decoration: none; /* In case you use <a> tags */
+            display: block;
+        }
+
+        .action-button-guide:hover {
+            color: #d2e7fb;
+            background-color:green;
+            transform: translateY(-1px);
+        }
+
+        .action-button-guide:active {
+            color: green
+            background-color:#d2e7fb;
+        }
+
+        /* Style for the text in the BACKLOG column */
+        .backlog-text {
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            flex-grow: 1; /* Ensure text fills space above buttons */
+            display: flex;
+            align-items: center; /* Center text vertically */
+            justify-content: center;
+        }
+
+        .btn-section1 {
+            display: flex;
+            gap: 20px; /* Space between the cards */
+            padding: 0px 20px 0px 20px;
+            background-color: #d2e7fb; /* Light background for contrast */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .btn-section-guide {
+            display: flex;
+            gap: 20px; /* Space between the cards */
+            padding: 0px 20px 0px 20px;
+            background-color: #d2e7fb; /* Light background for contrast */
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+
+        /* Card Scetion CSS----------------------------------------------- */
+        /* --- Modern Card Section CSS --- */
+
+/* 1. Container Styling (Flexbox for Layout) */
+.card-section {
+    display: flex;
+    gap: 20px; /* Space between the cards */
+    padding: 0px 20px 20px 20px;
+    
+    background-color: #d2e7fb; /* Light background for contrast */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. Individual Card Styling */
+.card {
+    flex: 1; /* Allows each card to grow and take up an equal width */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft, modern shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Stacks heading and content vertically */
+}
+
+
+
+/* middle card SCC--------------------------------- */
+.card-mid {
+    flex: 1; /* Allows each card to grow and take up an equal width */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft, modern shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stacks heading and content vertically */
+}
+
+.card-mid img {
+  width: 100%;
+  height: 300px;
+  vertical-align: bottom;
+}
+
+.card-mid img{
+    width: 100%;
+    height: 300px;
+    
+}
+
+/* 3. Heading and Content Styling */
+.card-heading h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #007bff; /* Primary brand color for headings */
+    font-size: 1.5em;
+    border-bottom: 2px solid #e9ecef; /* Separator for heading */
+    padding-bottom: 10px;
+}
+
+/* Specific styling for Card 2 to handle no explicit heading section */
+.card-2 .card-content {
+    /* Add a visual element where the heading would be */
+    padding-top: 0;
+}
+.card-2 .hidden-heading {
+    /* You can visually hide this or use it as a title for accessibility */
+    font-size: 1.5em;
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    /* Visually hide: position: absolute; left: -9999px; */
+    /* Or just leave it as a title if the content is clear */
+}
+
+
+.card-content {
+    flex-grow: 1; /* Ensures content fills the available space */
+    color: #495057;
+}
+
+.card-content ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.8;
+}
+
+.card-content li::before {
+    content: "•";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* 4. "Read More" Link Styling */
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.read-more:hover {
+    color: #0056b3;
+}
+
+/* 5. Responsiveness (Media Query) */
+@media (max-width: 768px) {
+    /* On screens 768px wide or less (e.g., tablets/phones), stack the cards */
+    .card-section {
+        flex-direction: column; /* Cards go from horizontal row to vertical stack */
+        padding: 30px 15px;
+    }
+
+    .card {
+        margin-bottom: 15px; /* Add space between the stacked cards */
+        flex-basis: auto; /* Revert flex basis */
+    }
+}
+
+
+
+
+
+
+/* footer Section ----------------------------------------------- */
+/* --- Responsive Footer CSS --- */
+
+.site-footer {
+    /* Background color: #004d99 (a deep blue) */
+    background-color: #004d99;
+    /* Text color: #ffffff (white) */
+    color: #ffffff;
+    padding: 30px 20px; /* Vertical and horizontal padding for spacing */
+    width: 100%;
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
+    text-align: center; /* Center the text content */
+}
+
+.footer-content {
+    /* Keep the content readable by limiting its width on very large screens */
+    max-width: 1100px;
+    margin: 0 auto; /* Center the content container */
+}
+
+.footer-content p {
+    font-size: 0.9em; /* Slightly smaller font size for traditional footer text */
+    line-height: 1.5;
+    margin: 0; /* Remove default paragraph margins */
+    opacity: 0.9; /* Subtle transparency for a modern, soft look */
+}
+
+.footer-content p strong {
+    font-weight: bold;
+    color: #ffd700; /* Optional: Use a gold/yellow color to highlight the department name */
+}
+
+/* Responsiveness: Adjust padding slightly on smaller screens */
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 20px 15px;
+    }
+    .footer-content p {
+        font-size: 0.85em;
+    }
+}
+
+
+
+
+ /* Page How to Apply page CSS---------------------------------- */
+.how-box1 {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px 20px 20px 20px;
+            background-color: #d2e7fb;
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+.how-button-group {
+            padding: 5px 15px 5px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px; /* Spacing between buttons */
+            flex-grow: 1; /* Allows button group to fill remaining space */
+            justify-content: center;
+            align-items: ;
+        }     
