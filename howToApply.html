@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-    <div class="header-content">
-        <img id="cc" src="imgs/biswa.png" alt="">
-        <img id="ind" src="imgs/indiaLogo.png" alt="">
-        <h1>Backward Classes Welfare Department</h1>
-        <h2>For Caste Certificate Application (OSCAR)</h2>
-        <p>Government of West Bengal</p>
-    </div>
-</header>
+    <header class="site-header">
+        <div class="header-content">
+            <img id="cc" src="/imgs/biswa.png" alt="">
+            <img id="ind" src="/imgs/indiaLogo.png" alt="">
+            <h1>Backward Classes Welfare Department</h1>
+            <h2>For Caste Certificate Application (OSCAR)</h2>
+            <p>Government of West Bengal</p>
+        </div>
+    </header>
 
 
 <Section class="btn-section-guide">
@@ -29,7 +29,10 @@
                     <button onclick="window.open('https://castcertificatewb.gov.in/how_to_applyy', '_blank');" class="action-button-guide" data-action="download-scst">SC/ST/OBC Guide</button>
                     <button onclick="window.open('https://castcertificatewb.gov.in/how_to_apply_ews');"
                      class="action-button-guide" data-action="download-scst">EWS Guide</button>
-                    <button onclick="window.open('index.html')" class="action-button" data-action="download-scst">Home</button>
+                    <!-- <button onclick="window.open('/index.html')" class="action-button" data-action="download-scst">Home</button> -->
+                    <a href="/index.html">
+                        <button class="action-button">Home</button>
+                    </a>
                 </div>
             </div>
     <!-- </div> -->
@@ -42,7 +45,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
