@@ -575,9 +575,10 @@
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft, modern shadow */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    padding: 30px;
+    padding: 10px;
     display: flex;
     flex-direction: column; /* Stacks heading and content vertically */
+    justify-content: center;
 }
 
 
@@ -585,13 +586,15 @@
 /* middle card SCC--------------------------------- */
 .card-mid {
     flex: 1; /* Allows each card to grow and take up an equal width */
-    background-color: #ffffff;
+    background-color: #cccccc;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft, modern shadow */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     padding: 10px;
     display: flex;
     flex-direction: column; /* Stacks heading and content vertically */
+    align-items: center;
+    justify-content: center;
 }
 
 .card-mid img {
@@ -614,6 +617,19 @@
     font-size: 1.5em;
     border-bottom: 2px solid #e9ecef; /* Separator for heading */
     padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.card .card-heading p {
+    color: #004d99;
+    font-size: 18px;
+}
+
+.card-content p {
+    text-align: justify;
 }
 
 /* Specific styling for Card 2 to handle no explicit heading section */
@@ -632,6 +648,45 @@
     /* Visually hide: position: absolute; left: -9999px; */
     /* Or just leave it as a title if the content is clear */
 }
+
+/* Table Designe------------------------- */
+
+
+/* Style for the table container */
+.styled-table {
+    border-collapse: collapse; /* Removes double borders between cells */
+    margin: 0;
+    font-size: 0.9em;
+    min-width: auto;
+}
+
+/* Style for the table header */
+.styled-table thead tr {
+    background-color: #009879; /* Teal color for the header */
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Style for header and data cells */
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd; /* Light border for all cells */
+}
+
+/* Alternating row colors (zebra stripes) for better readability */
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3; /* Light gray for even rows */
+}
+
+/* Highlight the last row */
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+    font-weight: ;
+}
+
+/* End Table Style------------------- */
 
 
 .card-content {
@@ -673,7 +728,7 @@
     /* On screens 768px wide or less (e.g., tablets/phones), stack the cards */
     .card-section {
         flex-direction: column; /* Cards go from horizontal row to vertical stack */
-        padding: 30px 15px;
+        padding: 10px 15px;
     }
 
     .card {
@@ -684,53 +739,78 @@
 
 
 
-
-
-
-/* footer Section ----------------------------------------------- */
-/* --- Responsive Footer CSS --- */
+/* Footer Section CSS ------------------------------------- */
 
 .site-footer {
-    /* Background color: #004d99 (a deep blue) */
     background-color: #004d99;
-    /* Text color: #ffffff (white) */
-    color: #ffffff;
-    padding: 30px 20px; /* Vertical and horizontal padding for spacing */
-    width: 100%;
-    box-sizing: border-box; /* Includes padding in the element's total width and height */
-    text-align: center; /* Center the text content */
+    color: aliceblue;
+    padding: 30px 160px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 30px;
 }
 
-.footer-content {
-    /* Keep the content readable by limiting its width on very large screens */
-    max-width: 1100px;
-    margin: 0 auto; /* Center the content container */
+.site-footer .footer-content p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
-.footer-content p {
-    font-size: 0.9em; /* Slightly smaller font size for traditional footer text */
-    line-height: 1.5;
-    margin: 0; /* Remove default paragraph margins */
-    opacity: 0.9; /* Subtle transparency for a modern, soft look */
+.nicImg {
+    padding: 6px 0px 10px 0px;
 }
 
-.footer-content p strong {
-    font-weight: bold;
-    color: #ffd700; /* Optional: Use a gold/yellow color to highlight the department name */
+.site-footer .footer-content1 p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: rgb(202, 198, 190);
 }
 
-/* Responsiveness: Adjust padding slightly on smaller screens */
-@media (max-width: 600px) {
+.site-footer .footer-content1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    width: 30;
+}
+
+/* Responsive CSS --------------*/
+
+@media (max-width: 1000px) {
     .site-footer {
-        padding: 20px 15px;
-    }
-    .footer-content p {
-        font-size: 0.85em;
-    }
+        padding: 30px 30px;
+        gap: 20;
+}
 }
 
+@media (max-width: 800px) {
+    .site-footer {
+        padding: 30px 30px;
+        gap: 20px;
+        display: block;
+}
+}
 
+@media (max-width: 800px) {
+    .site-footer .footer-content1 {
+        justify-content: center;
+        padding: 30px 30px;
+        gap: 20px;
+        display: block;
+}
+}
 
+@media (max-width: 800px) {
+    .site-footer .footer-content1 {
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        display: block;
+}
+}
+
+/*END of Footer Section CSS ------------------------------------- */
 
  /* Page How to Apply page CSS---------------------------------- */
 .how-box1 {
@@ -751,4 +831,5 @@
             flex-grow: 1; /* Allows button group to fill remaining space */
             justify-content: center;
             align-items: ;
-        }     
+        }  
+        
