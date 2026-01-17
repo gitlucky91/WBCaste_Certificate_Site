@@ -395,10 +395,10 @@
 /* Button Section CSS------------------------------------------------- */
 :root {
             /* Define colors for easy adjustments */
-            --header-bg: #004d99; /* Light Blue */
+            --header-bg: #00732b; /* Light Blue */
             --column-bg: #cccccc; /* Gray */
-            --button-bg: #ffee66; /* Yellow */
-            --button-hover: #ffdd44;
+            --button-bg: #ffdd44; /* Yellow */
+            --button-hover: #d9b410;
             --text-color: #000;
         }
 
@@ -631,6 +631,13 @@
 .card-content p {
     text-align: justify;
 }
+.p1 {
+    padding-bottom: 10px;
+}
+
+.p2 {
+    padding-top: 10px;
+}
 
 /* Specific styling for Card 2 to handle no explicit heading section */
 .card-2 .card-content {
@@ -660,9 +667,13 @@
     min-width: auto;
 }
 
+.td-val {
+    text-align: center;
+}
+
 /* Style for the table header */
 .styled-table thead tr {
-    background-color: #009879; /* Teal color for the header */
+    background-color: #00732b; /* Teal color for the header */
     color: #ffffff;
     text-align: left;
     font-weight: bold;
